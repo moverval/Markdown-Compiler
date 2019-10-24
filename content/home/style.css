@@ -1,0 +1,179 @@
+body .vbody {
+  position: relative;
+  width: 100%;
+  min-height: 100%;
+}
+
+body .vbody #footer-path {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+body .vbody #footer-path path {
+  fill: #212126;
+}
+
+body .vbody .pre-header .bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  cursor: pointer;
+}
+
+body .vbody .pre-header .bar .main {
+  position: absolute;
+  z-index: 10;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  left: 50%;
+  bottom: 0;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  font-size: 5px;
+  letter-spacing: 2px;
+  color: #D1D1D6;
+  margin: 0;
+  background: #1A1A1F;
+  text-align: center;
+  line-height: 25px;
+  width: 20%;
+}
+
+body .vbody .pre-header .bar .main i:nth-child(1) {
+  -webkit-animation: minimal-menu-dot-animation 2.5s linear infinite;
+          animation: minimal-menu-dot-animation 2.5s linear infinite;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+body .vbody .pre-header .bar .main i:nth-child(2) {
+  -webkit-animation: minimal-menu-dot-animation 2.5s linear infinite;
+          animation: minimal-menu-dot-animation 2.5s linear infinite;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+}
+
+body .vbody .pre-header .bar .main i:nth-child(3) {
+  -webkit-animation: minimal-menu-dot-animation 2.5s linear infinite;
+          animation: minimal-menu-dot-animation 2.5s linear infinite;
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+}
+
+body .vbody .pre-header .bar .list {
+  z-index: 5;
+  position: absolute;
+  width: 30%;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  text-align: center;
+  bottom: 25px;
+  left: 50%;
+  list-style: none;
+  margin: 0;
+  background: #1f1f25;
+  text-transform: uppercase;
+  color: #ccccd1;
+  -webkit-transition: opacity .15s, -webkit-transform .3s ease;
+  transition: opacity .15s, -webkit-transform .3s ease;
+  transition: transform .3s ease, opacity .15s;
+  transition: transform .3s ease, opacity .15s, -webkit-transform .3s ease;
+  -webkit-transform: translate(-50%, 150%);
+          transform: translate(-50%, 150%);
+  padding: 0;
+  opacity: 0;
+}
+
+body .vbody .pre-header .bar .list::after {
+  content: '';
+  width: 100%;
+  height: 37.5px;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+  background: #1f1f25;
+}
+
+body .vbody .pre-header .bar .list li {
+  font-family: Poppins;
+  font-weight: 700;
+  font-size: 10px;
+  line-height: 30px;
+  -webkit-transition: background .3s ease;
+  transition: background .3s ease;
+}
+
+body .vbody .pre-header .bar .list li p {
+  -webkit-transition: -webkit-transform .1s ease;
+  transition: -webkit-transform .1s ease;
+  transition: transform .1s ease;
+  transition: transform .1s ease, -webkit-transform .1s ease;
+}
+
+body .vbody .pre-header .bar .list li p:hover {
+  -webkit-transform: translateX(1%);
+          transform: translateX(1%);
+}
+
+body .vbody .pre-header .bar .list li:first {
+  background: #1A1A1F;
+}
+
+body .vbody .pre-header .bar:hover .list {
+  -webkit-transform: translate(-50%, -12.5px);
+          transform: translate(-50%, -12.5px);
+  opacity: 1;
+}
+
+body .vbody .pre-header .bar:hover .list li:hover {
+  background: #1A1A1F;
+}
+
+body .vbody main .background {
+  background-image: url(./background.jpg);
+  background-size: cover;
+  width: 100%;
+  height: 80vh;
+}
+
+@-webkit-keyframes minimal-menu-dot-animation {
+  0% {
+    color: #D1D1D6;
+  }
+  25% {
+    color: #b6b6be;
+  }
+  50% {
+    color: #D1D1D6;
+  }
+  75% {
+    color: #ececee;
+  }
+  100% {
+    color: #D1D1D6;
+  }
+}
+
+@keyframes minimal-menu-dot-animation {
+  0% {
+    color: #D1D1D6;
+  }
+  25% {
+    color: #b6b6be;
+  }
+  50% {
+    color: #D1D1D6;
+  }
+  75% {
+    color: #ececee;
+  }
+  100% {
+    color: #D1D1D6;
+  }
+}
+/*# sourceMappingURL=style.css.map */

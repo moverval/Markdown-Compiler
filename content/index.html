@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' https://kit.fontawesome.com;" />
+    <link rel="stylesheet" href="./index.css">
+    <title>Home</title>
+</head>
+<body>
+    <div id="load-screen">
+        <div class="loader"></div>
+        <div class="loadsite"></div>
+        <!-- <div class="particle-container">
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+        </div> -->
+        <div class="output">
+            <div class="text-holder">
+                <div id="_loader__output__container"></div>
+            </div>
+        </div>
+    </div>
+    <div id="popout">
+        <div id="maximize-not-supported">Not Supported</div>
+    </div>
+    <div id="title-bar">
+        <p id="_titlebar__text">Marker</p>
+        <div id="close-button" class="taskbar-button"></div>
+        <div id="maximize-button" class="taskbar-button"></div>
+        <div id="minimize-button" class="taskbar-button"></div>
+    </div>
+    <div id="_main-content"></div>
+    <script src="./virtual.js"></script>
+    <script src="./index.js"></script>
+</body>
+</html>

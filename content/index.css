@@ -1,0 +1,366 @@
+::-webkit-scollbar {
+  background: #26262B;
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #0e0e10;
+  border-radius: 3px;
+}
+
+body {
+  position: relative;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  background: #26262B;
+  min-width: 300px;
+  min-height: 200px;
+}
+
+body #_main-content {
+  position: absolute;
+  width: 100%;
+  height: calc(100vh - 30px);
+  left: 0;
+  top: 30px;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+body #load-screen {
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  -webkit-transition: opacity .3s ease;
+  transition: opacity .3s ease;
+  background: #26262B;
+  z-index: 5000;
+}
+
+body #load-screen .loader {
+  position: absolute;
+  border-radius: 75px;
+  border: 2px solid transparent;
+  border-top: 2px solid #E85353;
+  width: 75px;
+  height: 75px;
+  display: inline-block;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  -webkit-transform: top 1s ease;
+          transform: top 1s ease;
+  -webkit-animation: loader-default-animation linear infinite forwards 1s;
+          animation: loader-default-animation linear infinite forwards 1s;
+}
+
+body #load-screen .loader::before, body #load-screen .loader::after {
+  content: '';
+  border-radius: 37.5px;
+  display: inline-block;
+  position: absolute;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+}
+
+body #load-screen .loader::before {
+  border: 2px solid transparent;
+  border-top: 2px solid #F5EB1F;
+  width: 49.5px;
+  height: 49.5px;
+  -webkit-animation: loader-default-animation linear infinite forwards 2.3s;
+          animation: loader-default-animation linear infinite forwards 2.3s;
+}
+
+body #load-screen .loader::after {
+  border: 2px solid transparent;
+  border-top: 2px solid #56B461;
+  width: 24.75px;
+  height: 24.75px;
+  -webkit-animation: loader-default-animation linear infinite forwards 1.15s;
+          animation: loader-default-animation linear infinite forwards 1.15s;
+}
+
+body #load-screen .particle-container {
+  width: 100%;
+  height: 100vh;
+}
+
+body #load-screen .particle-container .particle:nth-child(1) {
+  position: absolute;
+  width: 5vw;
+  top: calc(112.5vh - (100vh / 4 * 1));
+  height: 2px;
+  background: #F5EB1F;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+body #load-screen .particle-container .particle:nth-child(2) {
+  position: absolute;
+  width: 5vw;
+  top: calc(112.5vh - (100vh / 4 * 2));
+  height: 2px;
+  background: #E85353;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+body #load-screen .particle-container .particle:nth-child(3) {
+  position: absolute;
+  width: 5vw;
+  top: calc(112.5vh - (100vh / 4 * 3));
+  height: 2px;
+  background: #56B461;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+body #load-screen .particle-container .particle:nth-child(4) {
+  position: absolute;
+  width: 5vw;
+  top: calc(112.5vh - (100vh / 4 * 4));
+  height: 2px;
+  background: #56B461;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+body #load-screen .particle-container .particle:nth-child(5) {
+  position: absolute;
+  width: 5vw;
+  top: calc(112.5vh - (100vh / 4 * 1));
+  left: 100%;
+  height: 2px;
+  background: #56B461;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+body #load-screen .particle-container .particle:nth-child(6) {
+  position: absolute;
+  width: 5vw;
+  top: calc(112.5vh - (100vh / 4 * 2));
+  left: 100%;
+  height: 2px;
+  background: #F5EB1F;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+body #load-screen .particle-container .particle:nth-child(7) {
+  position: absolute;
+  width: 5vw;
+  top: calc(112.5vh - (100vh / 4 * 3));
+  left: 100%;
+  height: 2px;
+  background: #E85353;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+body #load-screen .particle-container .particle:nth-child(8) {
+  position: absolute;
+  width: 5vw;
+  top: calc(112.5vh - (100vh / 4 * 4));
+  left: 100%;
+  height: 2px;
+  background: #F5EB1F;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+body #load-screen .output {
+  width: 30vw;
+  height: 15vh;
+  position: absolute;
+  left: 50%;
+  top: 65%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  border-radius: 2px;
+  background: #212126;
+  -webkit-transition: opacity .2s ease;
+  transition: opacity .2s ease;
+}
+
+body #load-screen .output .text-holder {
+  position: absolute;
+  width: 27vw;
+  height: 13vh;
+  top: 1vh;
+  left: 1.5vw;
+  overflow: hidden;
+}
+
+body #load-screen .output .text-holder #_loader__output__container {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  min-height: 13vh;
+}
+
+body #load-screen .output .text-holder #_loader__output__container .load-text {
+  text-align: center;
+  font-family: sans-serif;
+  margin: 1px 0;
+  font-size: 2vh;
+  color: #fff;
+  font-weight: 300;
+  text-transform: lowercase;
+  -webkit-animation: loader-animation-pop-out .2s ease-out forwards 1;
+          animation: loader-animation-pop-out .2s ease-out forwards 1;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+body #load-screen.noload {
+  opacity: 0;
+}
+
+body #popout {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: -100%;
+  left: 0;
+}
+
+body #popout #maximize-not-supported {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  border-radius: 1px;
+  background: #E85353;
+  -webkit-transition: .4s ease transform;
+  transition: .4s ease transform;
+  -webkit-transform: translateY(0) translateX(-50%);
+          transform: translateY(0) translateX(-50%);
+  -webkit-box-shadow: 1px 1px 0 1px rgba(40, 40, 40, 0.08), 3px 1px 0 2px rgba(0, 0, 0, 0.05);
+          box-shadow: 1px 1px 0 1px rgba(40, 40, 40, 0.08), 3px 1px 0 2px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  line-height: 30px;
+  color: #f8f8f8;
+  opacity: .8;
+  font-family: 'Helvetica';
+  font-weight: 400;
+  font-size: 15px;
+  margin: 0;
+  padding: 2px 3px;
+}
+
+body #popout #maximize-not-supported.active {
+  -webkit-transform: translateY(75px) translateX(-50%);
+          transform: translateY(75px) translateX(-50%);
+}
+
+body #title-bar {
+  -webkit-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-app-region: drag;
+  width: 100%;
+  height: 30px;
+  background: #1A1A1F;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10000;
+}
+
+body #title-bar .taskbar-button {
+  width: 12px;
+  height: 12px;
+  border-radius: 6px;
+  margin: 9px 4.5px;
+  float: right;
+  -webkit-app-region: no-drag;
+  -webkit-transition: border-radius .15s ease-in-out;
+  transition: border-radius .15s ease-in-out;
+}
+
+body #title-bar .taskbar-button:hover {
+  border-radius: 4.13793px;
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+}
+
+body #title-bar #_titlebar__text {
+  -webkit-app-region: no-drag;
+  opacity: 0;
+  text-transform: uppercase;
+  color: #A0A0A5;
+  font-weight: 700;
+  position: relative;
+  display: inline-block;
+  margin: 0 0 0 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 10.8px;
+  letter-spacing: 1px;
+  line-height: 30px;
+  cursor: default;
+}
+
+body #title-bar #minimize-button {
+  background: #56B461;
+  cursor: pointer;
+}
+
+body #title-bar #maximize-button {
+  background: #F5EB1F;
+  cursor: pointer;
+}
+
+body #title-bar #close-button {
+  background: #E85353;
+  margin-right: 12px;
+  cursor: pointer;
+}
+
+@-webkit-keyframes loader-default-animation {
+  from {
+    -webkit-transform: translate(-50%, -50%) rotate(0);
+            transform: translate(-50%, -50%) rotate(0);
+  }
+  to {
+    -webkit-transform: translate(-50%, -50%) rotate(360deg);
+            transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+@keyframes loader-default-animation {
+  from {
+    -webkit-transform: translate(-50%, -50%) rotate(0);
+            transform: translate(-50%, -50%) rotate(0);
+  }
+  to {
+    -webkit-transform: translate(-50%, -50%) rotate(360deg);
+            transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+@-webkit-keyframes loader-animation-pop-out {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: .5;
+  }
+}
+
+@keyframes loader-animation-pop-out {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: .5;
+  }
+}
+/*# sourceMappingURL=index.css.map */

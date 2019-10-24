@@ -1,0 +1,147 @@
+@import "../color.scss";
+
+body {
+    .vbody {
+        position: relative;
+        width: 100%;
+        min-height: 100%;
+
+        #footer-path {
+            width: 100%;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+    
+            path {
+                fill: darken($background, 2%);
+            }
+        }
+
+        .pre-header {
+            .bar {
+                $main-height: 25px;
+                position: fixed;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                cursor: pointer;
+
+                .main {
+                    position: absolute;
+                    z-index: 10;
+                    border-top-left-radius: 4px;
+                    border-top-right-radius: 4px;
+                    left: 50%;
+                    bottom: 0;
+                    transform: translateX(-50%);
+                    font-size: 5px;
+                    letter-spacing: 2px;
+                    color: $def-font-color;
+                    margin: 0;
+                    background: $titlebar-background;
+                    text-align: center;
+                    line-height: $main-height;
+                    width: 20%;
+
+                    @for $i from 1 through 3 {
+                        i:nth-child(#{$i}) {
+                            animation: minimal-menu-dot-animation 2.5s linear infinite;
+                            animation-delay: #{$i}s;
+                        }
+                    }
+                }
+
+                .list {
+                    z-index: 5;
+                    position: absolute;
+                    width: 30%;
+                    border-top-left-radius: 5px;
+                    border-top-right-radius: 5px;
+                    text-align: center;
+                    bottom: $main-height;
+                    left: 50%;
+                    list-style: none;
+                    margin: 0;
+                    background: lighten($titlebar-background, 2%);
+                    text-transform: uppercase;
+                    color: darken($def-font-color, 2%);
+                    // border-top: 1px solid darken($titlebar-background, 1%);
+                    transition: transform .3s ease, opacity .15s;
+                    transform: translate(-50%, 150%);
+                    padding: 0;
+                    opacity: 0;
+
+                    &::after {
+                        content: '';
+                        width: 100%;
+                        height: $main-height * 1.5;
+                        position: absolute;
+                        top: 100%;
+                        left: 50%;
+                        transform: translate(-50%, 0);
+                        background: lighten($titlebar-background, 2%);
+                    }
+
+                    li {
+                        font-family: Poppins;
+                        font-weight: 700;
+                        font-size: 10px;
+                        line-height: 30px;
+                        transition: background .3s ease;
+
+                        p {
+                            transition: transform .1s ease;
+
+                            &:hover {
+                                transform: translateX(1%);
+                            }
+                        }
+
+                        &:first {
+                            background: $titlebar-background;
+                        }
+                    }
+                }
+
+                &:hover .list {
+                    transform: translate(-50%, $main-height * -0.5);
+                    opacity: 1;
+
+                    li {
+                        &:hover {
+                            background: $titlebar-background;
+                        }
+                    }
+                }
+            }
+        }
+
+        main {
+            .background {
+                background-image: url(./background.jpg);
+                background-size: cover;
+                width: 100%;
+                height: 80vh;
+            }
+        }
+
+    }
+}
+
+@keyframes minimal-menu-dot-animation {
+    0% {
+        color: $def-font-color;
+    }
+    25% {
+        color: darken($def-font-color, 10%);
+    }
+    50% {
+        color: $def-font-color;
+    }
+    75% {
+        color: lighten($def-font-color, 10%);
+    }
+    100% {
+        color: $def-font-color;
+    }
+}
