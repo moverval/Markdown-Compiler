@@ -4,7 +4,7 @@
   "description": "Tool for creating pdfs, getting news and some other stuff",
   "main": "index.js",
   "dependencies": {
-    "electron": "^6.0.11"
+    "electron": "^7.2.4"
   },
   "devDependencies": {},
   "scripts": {
